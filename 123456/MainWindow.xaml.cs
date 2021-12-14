@@ -30,25 +30,33 @@ namespace _123456
         {
             string operace = operaceComboBox.Text;
             double cislo1 = double.Parse(cislo1TextBox.Text);
-            double vysledek;
-            double vysledek1; 
+            double vysledek=0;
+            double vysledek1;
 
-            
+
             if (operace == "mm")
-                vysledek = (cislo1 * 6,28);
-            vysledek1 = (cislo1 * cislo1 * 3,14);
+            {
+                vysledek = (cislo1 * 6.28);
+                vysledek1 = (cislo1 * cislo1 * 3.14);
+            }
             else if (operace == "cm")
-                vysledek = (cislo1 * 6,28);
-                vysledek1 = (cislo1 * cislo1 * 3,14); 
+            {
+                vysledek = (cislo1 * 6.28);
+                vysledek1 = (cislo1 * cislo1 * 3.14);
+            }
             else if (operace == "dm")
-                vysledek = (cislo1 * 6,28);
-                vysledek1 = (cislo1 * cislo1 * 3,14);
+            {
+                vysledek = (cislo1 * 6.28);
+                vysledek1 = (cislo1 * cislo1 * 3.14);
+            }
             else if (operace == "m")
-                vysledek = (cislo1 * 6,28);
-                vysledek1 = (cislo1 * cislo1 * 3,14);
+            {
+                vysledek = (cislo1 * 6.28);
+                vysledek1 = (cislo1 * cislo1 * 3.14);
+            }
+            else
             { 
-                else
-                    MessageBox.Show("Neplatné číslo!");
+                MessageBox.Show("Neplatné číslo!");
             }
             vysledekTextBlock.Text = vysledek.ToString();
         }
